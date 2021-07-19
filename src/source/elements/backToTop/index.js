@@ -1,4 +1,3 @@
-import React from 'react';
 import { BackTop } from 'antd';
 
 import Styles from './styles.module.scss';

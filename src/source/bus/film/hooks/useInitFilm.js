@@ -13,7 +13,7 @@ export const useInitFilm = id => {
     dispatch(filmActions.getReviews(id));
     dispatch(filmActions.getSimilarFilms(id));
     dispatch(filmActions.getRecommendationFilms(id));
-    if(!mostPopularFilm){
+    if (!mostPopularFilm) {
       dispatch(filmActions.getMostPopuparFilm());
     }
   }, [id]);

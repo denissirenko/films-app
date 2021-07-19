@@ -1,12 +1,11 @@
-import React from 'react';
 import { Statistic, Card, Row, Col } from 'antd';
-import {DollarOutlined, TrophyOutlined} from '@ant-design/icons'
+import { DollarOutlined, TrophyOutlined } from '@ant-design/icons'
 
 
 
 export const FilmStatistic = ({ film }) => {
 
-  return(
+  return (
     <Row gutter={16}>
       <Col span={8} >
         <Card>
@@ -15,7 +14,7 @@ export const FilmStatistic = ({ film }) => {
             precision={2}
             valueStyle={{ color: '#3F7CE1' }}
             prefix={<TrophyOutlined />}
-            value={Number(film?.popularity).toLocaleString() || ''}/>
+            value={Number(film?.popularity).toLocaleString() || ''} />
         </Card>
       </Col>
       <Col span={8} >
@@ -25,7 +24,7 @@ export const FilmStatistic = ({ film }) => {
             precision={0}
             valueStyle={{ color: '#28d7b5' }}
             prefix={<DollarOutlined />}
-            value={Number(film?.budget).toLocaleString() || ''}/>
+            value={Number(film?.budget).toLocaleString() || ''} />
         </Card>
       </Col>
       <Col span={8}>
@@ -35,7 +34,7 @@ export const FilmStatistic = ({ film }) => {
             precision={0}
             valueStyle={{ color: '#10C1BC' }}
             prefix={<DollarOutlined />}
-            value={Number(film?.revenue).toLocaleString() || ''}/>
+            value={Number(film?.revenue).toLocaleString() || ''} />
         </Card>
       </Col>
     </Row>)

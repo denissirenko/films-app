@@ -1,5 +1,4 @@
-import React from 'react';
-import { Table, Layout as LayoutComponent, Image, PageHeader  } from 'antd';
+import { Table, Layout as LayoutComponent, Image, PageHeader } from 'antd';
 
 import "antd/dist/antd.css";
 import { usePopularFilms } from './hooks/usePopularFilms';
@@ -26,7 +25,7 @@ export const PopularFilms = () => {
       dataIndex: 'title',
       align: 'center',
       width: '20%',
-      render: (text, record) => <LinkToFilm id={record.id} filmName={text}/>
+      render: (text, record) => <LinkToFilm id={record.id} filmName={text} />
     },
     {
       title: 'Popularity',
@@ -53,10 +52,6 @@ export const PopularFilms = () => {
     },
   ];
 
-  const backToMainPage = () => {
-    history.push('/');
-  };
-
   const onChange = (pagination) => {
     if (currentPage !== pagination.current) { _setCurrentPage(pagination.current) }
   };
@@ -82,9 +77,7 @@ export const PopularFilms = () => {
           title={() => (
             <PageHeader
               className="site-page-header"
-              onBack={backToMainPage}
               title="Popular films"
-              subTitle="To date, popular movies"
             />)
           }
           bordered

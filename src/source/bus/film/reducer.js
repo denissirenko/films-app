@@ -11,8 +11,8 @@ const initialState = {
   error: null,
 };
 
-export const filmReducer = (state = initialState, {type, payload}) => {
-  switch(type){
+export const filmReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case types.START_FETCHING:
       return {
         ...state,
@@ -44,25 +44,22 @@ export const filmReducer = (state = initialState, {type, payload}) => {
         ...state,
         reviews: [...payload],
       };
-    case types.SIMILAR_FILMS_FILL: {
+    case types.SIMILAR_FILMS_FILL:
       return {
         ...state,
-        similarFilms:[...payload],
-      }
-    };
-    case types.RECOMMENDATION_FILMS_FILL: {
+        similarFilms: [...payload],
+      };
+    case types.RECOMMENDATION_FILMS_FILL:
       return {
         ...state,
         recommendationFilms: [...payload],
-      }
-    };
-    case types.MOST_POPULAR_FILM_FILL: {
+      };
+    case types.MOST_POPULAR_FILM_FILL:
       return {
         ...state,
         mostPopularFilm: payload,
-      }
-    };
-    case types.FILM_CLEAN: {
+      };
+    case types.FILM_CLEAN:
       return {
         ...state,
         selectedFilm: null,
@@ -72,8 +69,7 @@ export const filmReducer = (state = initialState, {type, payload}) => {
         recommendationFilms: [],
         isFetching: false,
         error: null
-      }
-    };
+      };
 
     default:
       return state

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Layout } from '../../components/layout';
-import { Header} from '../../components/header';
+import { Header } from '../../components/header';
 import { Footer } from '../../components/footer';
-import { BackToTop} from '../../elements/backToTop';
+import { BackToTop } from '../../elements/backToTop';
 import { useParams } from 'react-router-dom';
 import { Spin, Alert, Layout as LayoutComponent } from 'antd';
 import { useInitFilm } from './hooks/useInitFilm';
@@ -17,10 +16,10 @@ export const Film = () => {
   const { filmId } = useParams();
   const { selectedFilm, reviews, isFetching, error } = useInitFilm(filmId);
 
-  if(error){
+  if (error) {
     return (
       <Layout>
-        <Header/>
+        <Header />
         <LayoutComponent.Content>
           <Alert
             message="Error"
@@ -35,15 +34,15 @@ export const Film = () => {
   }
 
 
-  return(
+  return (
     <Layout>
-      <Header/>
+      <Header />
       <LayoutComponent.Content>
-        {isFetching ? <Spin size='large'/> :
+        {isFetching ? <Spin size='large' /> :
           <>
-            <FilmDescription film={selectedFilm}/>
-            <FilmStatistic film={selectedFilm}/>
-            <Reviews reviews={reviews}/>
+            <FilmDescription film={selectedFilm} />
+            <FilmStatistic film={selectedFilm} />
+            <Reviews reviews={reviews} />
             <SimilarFilms />
             <RecommendationFilms />
           </>}
@@ -51,6 +50,6 @@ export const Film = () => {
       <BackToTop />
       <Footer />
     </Layout>
-   )
+  )
 }
-;
+  ;

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Styles from './styles/index.module.scss';
 import { book } from './../../navigation/book';
 import { useCurrentPage } from './hooks/useCurrentPage';
-import {useLatestFilms} from "../../bus/latestFilms/hooks/useLatestFilms";
 
 export const Header = () => {
   const [pageKey] = useCurrentPage();

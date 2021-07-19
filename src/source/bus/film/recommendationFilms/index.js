@@ -1,6 +1,5 @@
-import React from 'react';
 import { useRecommendationFilms } from '../hooks/useRecommendationFilms';
-import {Table, Image, Rate, PageHeader} from 'antd';
+import { Table, Image, Rate, PageHeader } from 'antd';
 import { Link } from 'react-router-dom';
 
 
@@ -26,7 +25,7 @@ export const RecommendationFilms = () => {
       dataIndex: 'popularity',
       align: 'center',
       width: '10%',
-      render: popularity => <Rate allowHalf value={popularity}/>
+      render: popularity => <Rate allowHalf value={popularity} />
     },
     {
       title: 'Release Date',
@@ -41,7 +40,7 @@ export const RecommendationFilms = () => {
     },
   ];
 
-  return(
+  return (
     <Table
       columns={columns}
       dataSource={topRecommendationFilms}
@@ -55,5 +54,5 @@ export const RecommendationFilms = () => {
       bordered
       rowKey="id"
     />
-   )
+  )
 }

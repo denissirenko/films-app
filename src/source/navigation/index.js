@@ -1,4 +1,3 @@
-import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { book } from './book';
 import { PopularFilms } from '../pages/popular-films';
@@ -21,12 +20,12 @@ export const Routes = () => (
                 <TopRatedFilms />
             </Route>
             <Route exact path={book.popularFilms}>
-                <PopularFilms/>
+                <PopularFilms />
             </Route>
             <Route path={book.film}>
                 <Film />
             </Route>
-            <Route exact path = { book.latestFilms.url } >
+            <Route exact path={book.latestFilms.url} >
                 < LatestFilms />
             </Route>
 

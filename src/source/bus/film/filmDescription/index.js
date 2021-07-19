@@ -1,11 +1,10 @@
-import React from 'react';
-import {  Descriptions, Row, Col, Image } from 'antd';
+import { Descriptions, Row, Col, Image } from 'antd';
 
 
 export const FilmDescription = ({ film }) => {
 
   const listOfGenres = film?.genres.length > 0 ? film?.genres.join('; ') : '';
-  return(
+  return (
     <>
       <Row justify='center' align='center' >
         <Col span={12} offset={6}>
@@ -13,12 +12,12 @@ export const FilmDescription = ({ film }) => {
             preview={false}
             alt={film?.title}
             src={film?.poster_path ?? ''}
-            width={250}/>
+            width={250} />
         </Col>
       </Row>
 
       <Descriptions
-        labelStyle={{ 'textAlign': 'left'}}
+        labelStyle={{ 'textAlign': 'left' }}
         title={film?.title}
         layout='horizontal'
         column={2} bordered>
@@ -31,5 +30,5 @@ export const FilmDescription = ({ film }) => {
       </Descriptions>
 
     </>
-   )
+  )
 }

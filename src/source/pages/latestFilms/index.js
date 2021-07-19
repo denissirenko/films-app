@@ -1,9 +1,8 @@
-import React from 'react';
 import { LatestFilms as ComponentLatestFilms } from '../../bus/latestFilms';
 
 export const LatestFilms = () => {
     return (
-       <ComponentLatestFilms/>
+        <ComponentLatestFilms />
     );
 };
 

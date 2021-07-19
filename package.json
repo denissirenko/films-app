@@ -2,6 +2,7 @@
   "name": "private",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://denissirenko.github.io/films-app/",
   "dependencies": {
     "@ant-design/icons": "^4.4.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -9,6 +10,8 @@
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.11.2",
     "classnames": "^2.2.6",
+    "gh-pages": "^3.2.3",
+    "history": "latest",
     "node-sass": "^4.13.0",
     "react": "^17.0.1",
     "react-datepicker": "^3.4.1",
@@ -19,8 +22,7 @@
     "react-scripts": "^4.0.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "history": "latest"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
